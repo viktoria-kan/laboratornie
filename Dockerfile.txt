@@ -1,0 +1,7 @@
+FROM debian
+MAINTAINER ViktoriaK
+WORKDIR /home
+CPPY test.go /home/test.go
+RUN apt-get update
+RUN apt-get install -y golang
+CMD go run test.go
